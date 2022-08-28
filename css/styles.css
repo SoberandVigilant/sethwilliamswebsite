@@ -8,7 +8,8 @@
     font-family: 'Roboto', sans-serif;
     margin: 0; padding:0;
     box-sizing: border-box;
-    text-decoration: none; border:none;
+    text-decoration: none; 
+    outline: none; border:none;
     text-transform: capitalize;
     transition: all .2s linear;
 }
@@ -25,8 +26,12 @@ html{
 html::webkit-scrollbar{
     width: 1.4rem;
 }
-html::webkit-scrollbar-track{
-    width: 1.4rem;
+html::-webkit-scrollbar-track{
+background: #222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow) ;
 }
  body{
     background: #111;
@@ -35,12 +40,12 @@ html::webkit-scrollbar-track{
  }
 
 section{
-    min-width: 100vh;
+    min-height: 100vh;
     padding:1rem;
 }
 
 .btn{
-    padding: 7rem 3rem;
+    padding: .7rem 3rem;
     background: #333;
     color: #fff;
     cursor:pointer;
@@ -51,7 +56,7 @@ section{
 
 .btn i {
     padding:0 .5rem;
-    font-size: 1.8;
+    font-size: 1.8rem;
 }
 
 .btn:hover{
@@ -149,6 +154,7 @@ header.navbar ul li a:hover{
     justify-content: center;
     flex-flow: column;
     padding: 0 15rem;
+    
 }
 
 .home h3{
@@ -271,7 +277,7 @@ padding: 0 .5rem;
 .contact .row .content{
     flex: 1 1 30rem;
     padding: 4rem;
-    padding: 0;
+    padding-bottom: 0;
 }
 
 .contact .row form{
@@ -283,7 +289,7 @@ padding: 0 .5rem;
 
 .contact .row form .box{
     padding: 1.5rem;
-    margin: 1rem;
+    margin: 1rem 0; 
     background: #3333;
     color: #fff;
     text-transform: none;
@@ -292,7 +298,7 @@ padding: 0 .5rem;
 }
 
 .contact .row form .box::placeholder{
-    text-transform: uppercase;
+    text-transform: capitalize;
 
 }
 
